@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trivia</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/inicio.css">
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+ 
+</head>
+<body>
+ <!-- pluggin facebook -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="container-img container-fluid">
+  <div class="inicio row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+      <div class="container-title">
+        <h2 class="text-center">Welcome to Trivia</h2>
+      </div>
+    </div>
+  <div class="col-xs-6 col-xs-offset-4 col-md-6">
+     <button id="btn" type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">Start</button>
+  </div>
+  </div> 
+</div>
+<footer class="ftr container-fluid">
+  <div class="row">
+    <div class="col-xs-4 col-md-4"><h3>Home</h3></div>
+    <div class="col-xs-4 col-md-4"><h3>About</h3></div>
+    <div class="col-xs-4 col-md-4"><h3>Settings</h3></div>
+  </div>
+</footer>
+  
+  <div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Inicia sesion con Facebook</h4>
+          <button id="loginfacebook">FB</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-dismiss btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDcbOBeMnGrBIpxwNXCqvCHLcClYK_5l-g",
+    authDomain: "tastyfood-ada3b.firebaseapp.com",
+    databaseURL: "https://tastyfood-ada3b.firebaseio.com",
+    projectId: "tastyfood-ada3b",
+    storageBucket: "tastyfood-ada3b.appspot.com",
+    messagingSenderId: "411922280355"
+  };
+  firebase.initializeApp(config);
+  </script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="assets/js/inicio.js"></script>
+</body>
+</html>
